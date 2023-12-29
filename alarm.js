@@ -43,6 +43,7 @@ setInterval(() => {
     if (alarmTime === `${h}:${m} ${ampm}`) {
         ringtone.play();
         ringtone.loop = true;
+        return alert("WAKE UP🗣️🗣️🗣️‼️‼️🔥🔥");
     }
 });
 
