@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Please! Wake Me Up!</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="src/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.9">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h2 class="maintitle">WAKE UP 🗣️🗣️🗣️</h1>
+            <h1 class="time">00:00:00 AM</h2>
+            <div class="content">
+                <div class="column">
+                    <select>
+                        <option value="hr" selected hidden>몇시?</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                    </select>
+                    <select>
+                        <option value="min" selected hidden>몇분?</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                    </select>
+                    <select>
+                        <option value="ampm" selected hidden>AM/PM</option>
+                        <option value="am">AM</option>
+                        <option value="pm">PM</option>
+                    </select>
+                </div>
+            </div>
+            <button>설정!</button>
+        </div>
+        <script src="alarm.js"></script>
+    </body>
+</html>
