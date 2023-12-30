@@ -15,7 +15,6 @@ body, .wrapper, .content {
 
 body {
     min-height: 100vh;
-    background-image: url('img/image.png');
     background-color: #ebedeb;
 }
 
@@ -28,7 +27,15 @@ body {
 }
 
 .wrapper h1 {
-    font-size: 38px;
+    font-size: 100px;
+    font-weight: 500;
+    margin: 30px 0;
+    position:absolute; 
+    left: 265px; 
+    top: 175px;
+}
+
+.wrapper h2 {
     font-weight: 500;
     margin: 30px 0;
 }
@@ -36,6 +43,8 @@ body {
 .wrapper content {
     width: 100%;
     justify-content: space-around;
+    position: absolute;
+    left: 270px;
 }
 
 .column select {
