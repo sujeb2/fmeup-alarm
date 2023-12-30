@@ -1,11 +1,11 @@
-const currentTime = document.querySelector("h1")
-const setupTime = document.querySelector("h3"),
+const currentTime = document.querySelector("h3")
+const setupTime = document.querySelector("h1"),
 content = document.querySelector(".content"),
 selectMenu = document.querySelectorAll("select"),
 setAlarmBtn = document.querySelector("button");
 
 let alarmTime, isAlarmSet,
-ringtone = new Audio(".\\src\\mp3\\alarm.mp3");
+ringtone = new Audio(".\\src\\mp3\\videoplayback.m4a");
 
 for (let i = 12; i > 0; i--) {
     i = i < 10 ? `0${i}` : i;
@@ -39,7 +39,7 @@ setInterval(() => {
     h = h < 10 ? "0" + h : h;
     m = m < 10 ? "0" + m : m;
     s = s < 10 ? "0" + s : s;
-    currentTime.innerText = `${h}:${m}:${s} ${ampm}`;
+    currentTime.innerText = `현재 시간은 ${h}:${m}:${s} ${ampm} 이에요.`;
 
     if (alarmTime === `${h}:${m}:${s} ${ampm}`) {
         ringtone.play();
@@ -54,6 +54,7 @@ function setAlarm() {
         ringtone.pause();
         content.classList.remove("disable");
         setAlarmBtn.innerText = "설정!";
+        document.getElementById("cc").style.display = "";
         return isAlarmSet = false;
     }
 
@@ -66,7 +67,7 @@ function setAlarm() {
     content.classList.add("disable");
     setAlarmBtn.innerText = "알람 재설정";
     document.getElementById("cc").style.display = "none";
-    setupTime.innerText = `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value} 안에 깨어나야해요!!`
+    setupTime.innerText = `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value}`
     console.log("alarm set on " + alarmTime);
     return alert("알람이 설정되었어요, " + alarmTime + " 이 되면 알려드릴께요.");
 }
