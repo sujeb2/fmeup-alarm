@@ -65,6 +65,7 @@ function setAlarm() {
     isAlarmSet = true;
     content.classList.add("disable");
     setAlarmBtn.innerText = "알람 재설정";
+    document.getElementById("cc").style.display = "none";
     setupTime.innerText = `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value} 안에 깨어나야해요!!`
     console.log("alarm set on " + alarmTime);
     return alert("알람이 설정되었어요, " + alarmTime + " 이 되면 알려드릴께요.");
