@@ -15,7 +15,8 @@ body, .wrapper, .content {
 
 body {
     min-height: 100vh;
-    background: #d4d0cf;
+    background-image: url('img/image.png');
+    background-color: #ebedeb;
 }
 
 .wrapper {
@@ -52,8 +53,8 @@ body {
     border: none;
     background: #ebedeb;
     cursor: pointer;
-    margin-top: 20px;
-    font-size: 19px;
+    margin-top: 23px;
+    font-size: 20px;
     padding: 17px 0;
     border-radius: 5px;
 }

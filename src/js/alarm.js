@@ -4,7 +4,7 @@ selectMenu = document.querySelectorAll("select"),
 setAlarmBtn = document.querySelector("button");
 
 let alarmTime, isAlarmSet,
-ringtone = new Audio("./src/ringtone.mp3");
+ringtone = new Audio("/src/ringtone.mp3");
 
 for (let i = 12; i > 0; i--) {
     i = i < 10 ? `0${i}` : i;
@@ -43,6 +43,7 @@ setInterval(() => {
     if (alarmTime === `${h}:${m} ${ampm}`) {
         ringtone.play();
         ringtone.loop = true;
+        setAlarmBtn.innerText = "설정!";
         return alert("WAKE UP🗣️🗣️🗣️‼️‼️🔥🔥");
     }
 });
