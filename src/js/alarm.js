@@ -1,3 +1,5 @@
+console.debug("loading");
+
 const currentTime = document.querySelector("h3")
 const setupTime = document.querySelector("h1"),
 content = document.querySelector(".content"),
@@ -7,6 +9,7 @@ setAlarmBtn = document.querySelector("button");
 let alarmTime, isAlarmSet,
 ringtone = new Audio(".\\src\\mp3\\videoplayback.m4a");
 
+console.debug("setup list");
 for (let i = 12; i > 0; i--) {
     i = i < 10 ? `0${i}` : i;
     let option = `<option value="${i}">${i}</option>`;
@@ -24,6 +27,7 @@ for (let i = 2; i > 0; i--) {
     let option = `<option value="${ampm}">${ampm}</option>`;
     selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option);
 }
+console.debug("success");
 
 setInterval(() => {
     let date = new Date(),
@@ -73,3 +77,4 @@ function setAlarm() {
 }
 
 setAlarmBtn.addEventListener("click", setAlarm);
+console.debug("load success");
