@@ -45,10 +45,11 @@ setInterval(() => {
     s = s < 10 ? "0" + s : s;
     currentTime.innerText = `현재 시간은 ${h}:${m}:${s} ${ampm} 이에요.`;
 
-    if (alarmTime === `${h}:${m}:${s} ${ampm}`) {
+    if (alarmTime === `${h}:${m} ${ampm}`) {
         ringtone.play();
         ringtone.loop = true;
         setAlarmBtn.innerText = "설정!";
+        document.getElementById("cc").style.display = "";
     }
 });
 
