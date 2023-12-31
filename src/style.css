@@ -9,8 +9,8 @@
 
 body, .wrapper, .content {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items:normal ;
+    justify-content: normal;
 }
 
 body {
