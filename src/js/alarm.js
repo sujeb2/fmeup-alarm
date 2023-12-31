@@ -48,7 +48,6 @@ setInterval(() => {
     if (alarmTime === `${h}:${m} ${ampm}`) {
         ringtone.play();
         ringtone.loop = true;
-        setAlarmBtn.innerText = "설정!";
         document.getElementById("cc").style.display = "";
     }
 });
